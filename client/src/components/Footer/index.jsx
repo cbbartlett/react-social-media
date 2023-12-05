@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from '';
+import { useLocation, useNavigate } from 'react-dom';
 
 const Footer = () => {
   const location = useLocation();
@@ -15,16 +15,16 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
+          Made by the{' '}
           <span
             className="emoji"
             role="img"
             aria-label="heart"
             aria-hidden="false"
           >
-            ❤️
+            🐐
           </span>{' '}
-          by Aeryk Andrews, Jessica Linex, Christopher Bartlett, & Apollo Vavra.
+          by Aeryk Andrews, Kelly Boyd, Jessica Linex, Christopher Bartlett, & Apollo Vavra.
         </h4>
       </div>
     </footer>
