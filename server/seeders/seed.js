@@ -1,7 +1,7 @@
-const db = require('../config/connection');
-const { Profile } = require('../models');
-const cleanDB = require('./cleanDB');
-const profileSeeds = require('./profileSeeds.json');
+import db from '../config/connection';
+import { Profile } from '../models';
+import cleanDB from './cleanDB';
+import profileSeeds from './profileSeeds.json';
 
 db.once('open', async () => {
   try {

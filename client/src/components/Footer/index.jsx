@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { useLocation, useNavigate } from "react-router-dom";
 
+=======
+import { useLocation, useNavigate } from 'react-dom';
+>>>>>>> 1d44878efd0577377e73e9f6cc77e7bdad4ab354
 
 const Footer = () => {
   const location = useLocation();
@@ -16,16 +20,16 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
+          Made by the{' '}
           <span
             className="emoji"
             role="img"
             aria-label="heart"
             aria-hidden="false"
           >
-            ❤️
+            🐐
           </span>{' '}
-          by Aeryk Andrews, Jessica Linex, Christopher Bartlett, & Apollo Vavra.
+          by Aeryk Andrews, Kelly Boyd, Jessica Linex, Christopher Bartlett, & Apollo Vavra.
         </h4>
       </div>
     </footer>
