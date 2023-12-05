@@ -12,9 +12,9 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Project Name</h1>
+            <h1 className="m-0">Project Y</h1>
           </Link>
-          <p className="m-0">Share your thoughts....</p>
+          <p className="m-0">Share your thoughts....Y not?</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
@@ -32,7 +32,7 @@ const Header = () => {
                 Login
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
+                Signup for Y
               </Link>
             </>
           )}

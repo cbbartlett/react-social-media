@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { useLocation, useNavigate } from "react-router-dom";
-
-=======
 import { useLocation, useNavigate } from 'react-dom';
->>>>>>> 1d44878efd0577377e73e9f6cc77e7bdad4ab354
 
 const Footer = () => {
   const location = useLocation();
@@ -20,7 +15,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made by the{' '}
+           Y made by the{' '}
           <span
             className="emoji"
             role="img"
