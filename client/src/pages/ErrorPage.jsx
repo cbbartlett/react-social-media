@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { useRouteError } from "react-dom";
 
 export default function ErrorPage() {
@@ -14,3 +16,4 @@ export default function ErrorPage() {
     </div>
   );
 }
+>>>>>>> 1d44878efd0577377e73e9f6cc77e7bdad4ab354
