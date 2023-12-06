@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import {Header} from '../components/Header/index';
+import {Footer} from '../components/Footer/index';
+
 const Homepage = () => 
 {
     return (
         <div className="homepage">
             <header>
-                <h1>
-                    <ul>
-                        <li><Link to="/signup">Sign Up</Link></li>
-                        <li><Link to="/login">Log In</Link></li>
-                    </ul>
-                </h1>
+                <Header />
             </header>
             <main>
                 <section>
@@ -40,25 +38,7 @@ const Homepage = () =>
                 </section>
             </main>
             <footer>
-                <div>
-                    <div>
-                        <h3>Contact Information</h3>
-                        <p>Email: Stacysmom@gmail.com</p>
-                        <p>Phone: 1-800-867-5309</p>
-                        <p>Address: 123 Main Street, Totally Real City, Super Cool State, Amazing Zip Code</p>
-                    </div>
-                    <div>
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li><a href="https://www.facebook.com/example" target="_blank">Facebook</a></li>
-                            <li><a href="https://www.twitter.com/example" target="_blank">Twitter</a></li>
-                            <li><a href="https://www.instagram.com/example" target="_blank">Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <p></p>
-                </div>
+                <Footer />
             </footer>
         </div>
     );
