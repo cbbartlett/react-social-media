@@ -1,6 +1,6 @@
-// starter template for header -jessica
-import { Link } from 'react-dom';
-import Auth from '../../utils/auth';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Auth from '../../../utils/auth.js';
 
 const Header = () => {
   const logout = (event) => {
@@ -42,4 +42,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export { Header as default };
