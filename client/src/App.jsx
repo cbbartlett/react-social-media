@@ -11,7 +11,6 @@ import ErrorPage from './pages/ErrorPage';
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -19,7 +18,6 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
