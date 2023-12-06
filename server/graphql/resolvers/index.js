@@ -1,6 +1,6 @@
-import postsResolvers from './posts';
-import usersResolvers from './users';
-import commentsResolvers from './comments';
+import postsResolvers from './posts.js';
+import usersResolvers from './users.js';
+import commentsResolvers from './comments.js';
 
 
 export default {

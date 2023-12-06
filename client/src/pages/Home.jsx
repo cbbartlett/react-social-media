@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {Header} from '../components/Header/index';
-import {Footer} from '../components/Footer/index';
+import Header from '../components/Header/index.jsx';
+import Footer from '../components/Footer/index.jsx';
 
 const Homepage = () => 
 {

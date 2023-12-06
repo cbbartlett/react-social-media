@@ -1,10 +1,10 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { UserInputError } from 'apollo-server';
 
-import { validateRegisterInput, validateLoginInput } from '../../util/validators';
+import { validateRegisterInput, validateLoginInput } from '../../utils/validators.js';
 
-import User from '../../models/User';
+import User from '../../models/User.js';
 
 
 function generateToken(user){

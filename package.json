@@ -13,6 +13,6 @@
   "author": "Aeryk Andrews, Christopher Bartlett, Kelly Boyd, Jessica Linex, Apollo Vavra",
   "license": "MIT",
   "devDependencies": {
-  "concurrently": "8.2.2"
+    "concurrently": "^8.2.2"
   }
 }
