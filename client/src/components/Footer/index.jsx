@@ -15,7 +15,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-           Y made by the{' '}
+          Project 'Y' made by the{' '}
           <span
             className="emoji"
             role="img"
