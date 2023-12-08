@@ -18,7 +18,7 @@ const Homepage = () =>
                     </p>
                 </section>
                 <section>
-                <h2>About Us!</h2>
+                    <h2>About Us!</h2>
                     <p>
                         Established in early December of 2023, Y Social Media is a platform where users can interact, share posts,
                         comment, and engage with others. We provide a friendly and interactive space to connect with friends and 
