@@ -8,10 +8,12 @@ const schema = buildSchema(`
   type User {
     id: ID!
     username: String!
+    password: String!
   }
   
   type Mutation {
     createUser(username: String!, password: String!): User!
+    loginUser(username: String!, password: String!): User!
   }
   
   type Query {
@@ -50,6 +52,24 @@ const root = {
       return savedUser;
     } catch (error) {
       throw new Error("Failed to create user");
+    }
+  },
+  loginUser: async (args) => {
+    try {
+      const { username, password } = args;
+
+      // Find the user in the database by username and password
+      const user = await User.findOne({ username, password });
+
+      // If the user doesn't exist or the password is incorrect, throw an error
+      if (!user) {
+        throw new Error("Invalid username or password");
+      }
+
+      // Return the user object
+      return user;
+    } catch (error) {
+      throw new Error("Failed to login");
     }
   },
 };
