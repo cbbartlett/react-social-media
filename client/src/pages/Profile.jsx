@@ -1,12 +1,12 @@
 import { Navigate, useParams } from 'react';
 import { useQuery } from '@apollo/client';
 
-import CommentForm from '../components/CommentForm';
-import CommentList from '../components/CommentList';
+// import CommentForm from '../components/CommentForm';
+// import CommentList from '../components/CommentList';
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+// import { QUERY_USER, QUERY_ME } from '../../utils/queries';
 
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();
