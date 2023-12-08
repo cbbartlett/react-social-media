@@ -42,9 +42,7 @@ const Signup = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
-        <button type="button" onClick={handleSignup}>
-          <Route path="/Signup" element={<Signup />} />Signup
-        </button>
+        <Route path="/Home" element={<button type="button" onClick={handleSignup}>Sign Up!</button>}/>
       </form>
     </div>
   );
