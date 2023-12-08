@@ -5,7 +5,6 @@ const typeDefs = gql`
     id: ID!
     username: String!
     password: String!
-    createdAt: String!
   }
 
   input CreateUserInput {
@@ -19,6 +18,7 @@ const typeDefs = gql`
 
   type Mutation {
     createUser(input: CreateUserInput!): User!
+    loginUser(username: String!, password: String!): User!
   }
 
   schema {
