@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "watch": "nodemon"
+    "watch": "nodemon server.js",
+    "apollo": "nodemon apollosetup.js"
   },
   "keywords": [],
   "author": "",

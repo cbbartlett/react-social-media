@@ -1,30 +1,23 @@
-import { ApolloServer } from 'apollo-server';
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+import express from "express";
+import { graphqlHTTP } from "express-graphql";
+import { buildSchema } from "graphql";
+import cors from "cors";
 
-import typeDefs from './graphql/typeDefs.js';
-import resolvers from './graphql/resolvers/index.js';
+// Create an Express app
+const app = express();
 
-import dotenv from 'dotenv';
-dotenv.config();
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: ({ req }) => ({ req })
+// Connect to MongoDB
+mongoose.connect('mongodb+srv://root:root@socialmediacluster.0txf60c.mongodb.net/Dasocialmedia', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-const PORT = process.env.port || 8080;
+// Define the schema and model
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+});
+const User = mongoose.model('User', userSchema);
 
-
-mongoose.connect('mongodb+srv://root:root@socialmediacluster.0txf60c.mongodb.net/?retryWrites=true&w=majority');
-
-//   .then(() => {
-//     console.log('MongoDB Connected')
-//     return server.listen({ port: PORT })
-//   })
-//   .then(res => {
-//     console.log(`Server running at ${res.url}`)
-//   })
-//   .catch(err => {
-//     console.error(err)
-//   })
