@@ -10,11 +10,8 @@ import User from '../../models/User.js';
 function generateToken(user){
   return jwt.sign({
     id: user.id,
-    email: user.email,
     createdAt: user.createdAt,
     username: user.username,
-    photoURL: user.photoURL,
-    isAdmin: user.isAdmin
   }, process.env.SECRET_KEY, {
     expiresIn: '1h'
   });
@@ -83,9 +80,9 @@ export default {
         token
       };
     },
-    async register(_, { registerInput: { username, email, password, confirmPassword } }) {
+    async register(_, { registerInput: { username, password } }) {
       // Validate user data
-      const { valid, errors } = validateRegisterInput(username, email, password, confirmPassword);
+      const { valid, errors } = validateRegisterInput(username, password);
 
       if (!valid) {
         throw new UserInputError('Errors', { errors });
