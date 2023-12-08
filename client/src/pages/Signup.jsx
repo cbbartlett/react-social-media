@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
-
+var isLoggedIn;
 const SIGNUP_MUTATION = gql`
   mutation Signup($username: String!, $password: String!) {
     createUser(username: $username, password: $password) {
@@ -21,6 +21,7 @@ const Signup = () => {
     signup({ variables: { username, password } })
       .then(() => {
         console.log('Signup successful');
+        isLoggedIn == true;
       })
       .catch((error) => {
         console.error('Signup error:', error);
@@ -42,7 +43,7 @@ const Signup = () => {
         </label>
         <br />
         <button type="button" onClick={handleSignup}>
-          Signup
+          <Route path="/Signup" element={<Signup />} />Signup
         </button>
       </form>
     </div>
