@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../App.css';
 import Header from '../components/Header/index.jsx';
 import Footer from '../components/Footer/index.jsx';
 
@@ -25,10 +25,10 @@ const Homepage = () => {
         <section>
           <h2>Features</h2>
           <ul>
-            <li>Profile customization</li>
-            <li>News feed with personalized content</li>            
-            <li>Photo and video sharing</li>
-            <li>Real-time instant messaging</li>
+            <li>⭐ Profile customization</li>
+            <li>⭐News feed with personalized content</li>            
+            <li>⭐Photo and video sharing</li>
+            <li>⭐Real-time instant messaging</li>
           </ul>
         </section>
         <section>
