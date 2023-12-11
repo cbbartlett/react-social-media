@@ -1,7 +1,9 @@
+// Signup.jsx
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
-var isLoggedIn;
+import '../App.css'; // Import the shared CSS file
+
 const SIGNUP_MUTATION = gql`
   mutation Signup($username: String!, $password: String!) {
     createUser(username: $username, password: $password) {
@@ -29,24 +31,26 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
-      <form>
-        <label>
+    <div className="LsContainer">
+      <h2 className='LsH2'>Signup</h2>
+      <form className='LsForm'>
+        <label className='LsLable'>
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
         <br />
-        <label>
+        <label className='LsLable'>
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
         <Route path="/Home" element={<button type="button" onClick={handleSignup}>Sign Up!</button>}/>
+        <button className='LsButton' type="button" onClick={handleSignup}>
+          Signup
+        </button>
       </form>
     </div>
   );
 };
 
 export default Signup;
-
