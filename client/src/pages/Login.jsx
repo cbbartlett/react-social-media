@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Y.png';
 import '../App.css';
 
 const LOGIN_MUTATION = gql`
@@ -36,6 +37,8 @@ const Login = () => {
   };
 
   return (
+    <div>
+    <img className="logo" src={logo} alt="Project Y"></img>
     <div className='LsContainer'>
       <h2 className='LSh2'>Login</h2>
       <form className='LsForm'>
@@ -54,6 +57,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+  </div>
   );
 };
 

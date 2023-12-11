@@ -3,6 +3,8 @@ import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import '../App.css'; // Import the shared CSS file
+import logo from '../assets/Y.png';
+
 
 
 
@@ -40,6 +42,8 @@ const Signup = () => {
 
 
   return (
+  <div>
+    <img className="logo" src={logo} alt="Project Y"></img>
     <div className="LsContainer">
       <h2 className='LSh2'>Signup</h2>
       <form className='LsForm'>
@@ -57,6 +61,7 @@ const Signup = () => {
           Signup
         </button>
       </form>
+    </div>
     </div>
   );
 };
