@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
-    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-html": "^3.2.0"
   }
 }
