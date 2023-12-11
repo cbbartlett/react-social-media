@@ -1,3 +1,4 @@
+// Import statements including imports for apollo authentication and our js authentication.
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import Post from '../../models/thought.js';
 import checkAuth from '../../utils/check-auth.js';

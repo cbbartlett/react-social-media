@@ -1,3 +1,4 @@
+// Importing gql from apollo so we can continue mutations and our inputs and types for User, Comment, Thought, and the creation of comment and thought.
 import { gql } from 'apollo-server';
 
 const typeDefs = gql`
@@ -39,5 +40,5 @@ type Query {
   thoughts: [Thought!]!
 }
 `;
-
+// Export statement so that this can be called in other files.
 export default typeDefs;

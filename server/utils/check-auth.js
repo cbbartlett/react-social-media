@@ -1,3 +1,4 @@
+// Importing our JWT's (Json Web Tokens)
 import jwt from 'jsonwebtoken';
 
 import { AuthenticationError } from 'apollo-server';

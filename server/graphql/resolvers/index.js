@@ -1,3 +1,4 @@
+// Import statements importing other resolvers from the same folder
 import postsResolvers from './posts.js';
 import usersResolvers from './createUser.js';
 import commentsResolvers from './Thoughts.js';

@@ -1,8 +1,9 @@
+// Our import statements so we can use react and apollo.
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_COMMENT } from '../../utils/mutations';
 
-
+// Our variable that handles the comment forms and how we call the comment forms later.
 const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
@@ -31,7 +32,7 @@ const CommentForm = ({ thoughtId }) => {
       setCharacterCount(value.length);
     }
   };
-
+// This is what the variable returns. It returns a string of HTML that the App.jsx displays.
   return (
     <div>
       <h4>That was pretty deep! What were your thoughts on that?</h4>
@@ -68,4 +69,5 @@ const CommentForm = ({ thoughtId }) => {
   );
 };
 
+// Exporting our variable so it can be called in other files.
 export default CommentForm;

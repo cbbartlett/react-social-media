@@ -1,3 +1,4 @@
+// Mutation used to log a user in
 const resolvers = {
   Mutation: {
     loginUser: (parent, args) => {

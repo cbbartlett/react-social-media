@@ -1,9 +1,10 @@
+// Our variable that handles the comment list and what we store the comments in.
 const CommentList = ({ comments = [] }) => {
   console.log(comments);
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
-
+// This is what the variable returns. It returns a string of HTML that the App.jsx displays.
   return (
     <>
       <h3
@@ -31,5 +32,5 @@ const CommentList = ({ comments = [] }) => {
     </>
   );
 };
-
+// Exporting our variable so it can be called in other files.
 export default CommentList;

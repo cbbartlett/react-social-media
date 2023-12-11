@@ -1,3 +1,4 @@
+// Importing our schema from our DB
 import { model, Schema, mongoose } from 'mongoose';
 
 const commentSchema = new mongoose.Schema({
@@ -20,5 +21,5 @@ const commentSchema = new mongoose.Schema({
       required: true,
     },
   });
-  
+  // Export statement so that we can call this in other files
   export default model('Comment', commentSchema);

@@ -1,3 +1,4 @@
+// This is a mutation that we use to create a User
 const resolvers = {
   Mutation: {
     createUser: async (parent, args) => {

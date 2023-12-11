@@ -1,3 +1,4 @@
+// Our import statements so we can use react and apollo.
 import { Navigate, useParams } from 'react';
 import { useQuery } from '@apollo/client';
 
@@ -24,7 +25,7 @@ const Profile = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-
+// Guide our user to sign up or log in
   if (!user?.username) {
     return (
       <h4>
@@ -33,7 +34,7 @@ const Profile = () => {
       </h4>
     );
   }
-
+// This is what the variable returns. It returns a string of HTML that the App.jsx displays.
   return (
     <div>
       <div className="flex-row justify-center mb-3">
@@ -61,5 +62,5 @@ const Profile = () => {
     </div>
   );
 };
-
+// Exporting our variable so it can be called in other files.
 export default Profile;
