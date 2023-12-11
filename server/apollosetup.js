@@ -6,8 +6,13 @@ const app = express();
 
 const server = new ApolloServer({ typeDefs });
 
-server.applyMiddleware({ app });
+async function startServer() {
+  await server.start();
+  server.applyMiddleware({ app });
+}
 
-app.listen({ port: 4000 }, () =>
-  console.log(`Server ready at http://localhost:4000/graphql`)
-);
+startServer().then(() => {
+  app.listen({ port: 4000 }, () =>
+    console.log(`Server ready at http://localhost:4000/graphql`)
+  );
+});
