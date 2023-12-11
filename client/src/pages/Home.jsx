@@ -43,45 +43,26 @@ const Homepage = () => {
   return (
     <div className="page">
       <Header />
-      <section>
-        <h2>Recent Thoughts</h2>
-        {thoughts && thoughts.length > 0 ? (
-          thoughts.map((thought) => (
-            <div key={thought._id}>
-              <h3>{thought.thoughtText}</h3>
-              <ul>
-                {thought.comments &&
-                  thought.comments.map((comment) => (
-                    <li key={comment._id}>{comment.commentText}</li>
-                  ))}
-              </ul>
-            </div>
-          ))
-        ) : (
-          <p>No thoughts found.</p>
-        )}
-      </section>
-      <main>
-        <section>
-          <p>
+      <main class="sidebubble">
+        <section class="sidebubble">
+          <p class="sidebubble1">
             Join our vibrant community and connect with friends, share your thoughts, or discover new content!
           </p>
         </section>
-        <section>
-          <h2>About Us!</h2>
-          <p>
+        <section class="sidebubble">
+          <h2 class="sidebubble">About Us!</h2>
+          <p class="sidebubble">
             Established in early December of 2023, Y Social Media is a platform where users can interact, share posts,
             comment, and engage with others. We provide a friendly and interactive space to connect with friends and 
             family, as well as form new connections.
           </p>
         </section>
-        <section>
-          <h2>Features</h2>
-          <ul>
-            <li>Profile customization</li>
-            <li>News feed with personalized content</li>            
-            <li>Photo and video sharing</li>
-            <li>Real-time instant messaging</li>
+        <section class="sidebubble">
+          <h2 class="sidebubble">Features</h2>
+          <ul class="sidebubble">
+            <li>A Post Feed with all of your friends thoughts about the world!</li>            
+            <li>Post about how you feel and what you think of others</li>
+            <li>Comment on others posts. and if you feel like you didn't express yourself to your standard.. deleting your post is an Option!</li>
           </ul>
         </section>
       </main>

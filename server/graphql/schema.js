@@ -22,6 +22,7 @@ input CreateThoughtInput {
   thoughtText: String!
 }
 
+
 input CreateCommentInput {
   thoughtId: ID!
   commentText: String!
@@ -30,13 +31,14 @@ input CreateCommentInput {
 type Mutation {
   createUser(username: String!, password: String!): User!
   loginUser(username: String!, password: String!): User!
-  createThought(input: CreateThoughtInput!): Thought!
-  createComment(input: CreateCommentInput!): Comment!
+  createThought(input: CreateThoughtInput!): Thought
+  updateThought(id: ID!, thoughtText: String!): Thought
+  deleteThought(id: ID!): Thought
+  createComment(input: CreateCommentInput!): Comment
 }
 
 type Query {
-  hello: String
-  thoughts: [Thought!]!
+  thoughts: [Thought]
 }
 `;
 

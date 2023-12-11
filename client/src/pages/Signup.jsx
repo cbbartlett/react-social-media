@@ -4,6 +4,8 @@ import { gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import '../App.css'; // Import the shared CSS file
 
+
+
 const SIGNUP_MUTATION = gql`
   mutation Signup($username: String!, $password: String!) {
     createUser(username: $username, password: $password) {
@@ -20,16 +22,22 @@ const Signup = () => {
 
   const [signup, { loading, error }] = useMutation(SIGNUP_MUTATION);
 
-  const handleSignup = () => {
-    signup({ variables: { username, password } })
-      .then(() => {
-        console.log('Signup successful');
-        navigate('/login');
-      })
-      .catch((error) => {
-        console.error('Signup error:', error);
-      });
+  const handleSignup = async () => {
+    try {
+      signup({ variables: { username, password } })
+        .then(() => {
+          console.log('Signup successful');
+          navigate('/login');
+        })
+        .catch((error) => {
+          console.error('Signup error:', error);
+        });
+    } catch (error) {
+      console.error('Error handling signup:', error);
+    }
   };
+  
+
 
   return (
     <div className="LsContainer">
