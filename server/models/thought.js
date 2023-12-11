@@ -1,3 +1,4 @@
+// Importing our schema from our DB
 import { model, Schema, mongoose } from 'mongoose';
 
 const thoughtSchema = new mongoose.Schema({
@@ -12,5 +13,5 @@ const thoughtSchema = new mongoose.Schema({
   },
 });
 
-
+// Export statement so that we can call this in other files
 export default model('Thought', thoughtSchema);

@@ -1,3 +1,4 @@
+// Our import statements so we can use react and also imports our Header and Footer elements as well as our CSS styling.
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
@@ -27,6 +28,7 @@ const Homepage = () => {
         `,
       }),
     })
+    // Error handling
       .then((response) => response.json())
       .then((data) => {
         if (data.errors) {
@@ -39,7 +41,7 @@ const Homepage = () => {
         console.error('Failed to fetch thoughts:', error.message);
       });
   }, []);
-
+  // This is what the variable returns. It returns a string of HTML that the App.jsx displays.
   return (
     <div className="page">
       <Header />
@@ -89,5 +91,5 @@ const Homepage = () => {
     </div>
   );
 };
-
+// Exporting our variable so it can be called in other files.
 export default Homepage;

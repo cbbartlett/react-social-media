@@ -1,3 +1,4 @@
+// Importing ObjectId from our mongoDB database
 import { ObjectId } from 'mongodb';
 
 const resolvers = {
@@ -42,5 +43,5 @@ const resolvers = {
     },
   },
 };
-
+// Export statement so this can be used elsewhere
 export default resolvers;

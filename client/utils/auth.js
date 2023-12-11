@@ -1,3 +1,4 @@
+// Importing jwtDecode so we can use Json Web Tokens in our code
 import { jwtDecode } from "jwt-decode";
 
 class AuthService {
@@ -38,5 +39,6 @@ class AuthService {
   }
 }
 
+// Export statement so we can call AuthService in other files
 export default new AuthService();
 

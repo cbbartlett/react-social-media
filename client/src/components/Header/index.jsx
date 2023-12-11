@@ -1,3 +1,4 @@
+// Our import statements so we can use react and also imports our isLoggedIn logic.
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../../utils/auth';
@@ -7,6 +8,7 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
+    // This is what the variable returns. It returns a string of HTML that the App.jsx displays.
   return (
     // <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
@@ -44,5 +46,5 @@ const Header = () => {
     // </header>
    );
 };
-
+// Exporting our variable so it can be called in other files.
 export { Header as default };

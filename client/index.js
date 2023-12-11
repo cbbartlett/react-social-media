@@ -1,3 +1,4 @@
+// Import statements including what we need for our DB and dotenv
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
@@ -5,6 +6,7 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import cors from "cors";
 
+// This is building all of the columns in our DB
 const schema = buildSchema(`
   type User {
     id: ID!

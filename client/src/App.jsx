@@ -11,6 +11,7 @@ import isLoggedIn from './pages/Signup'
 
 
 function App() {
+  // This is the brain of the program. This controls where the user is directed and how they are directed to which page
   return (
     <Router>
       <Routes>
@@ -23,6 +24,6 @@ function App() {
     </Router>
   );
 }
-
+// Export statement so the function App can be called in other files.
 export default App;
 
