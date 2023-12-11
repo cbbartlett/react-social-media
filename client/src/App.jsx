@@ -15,15 +15,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        if(isLoggedIn)
-        {
-          <Route path="/profile" element={<Profile />} />
-        }
-        else if(!isLoggedIn)
-        {
-          <><Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} /></>
-        }
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
