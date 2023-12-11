@@ -62,7 +62,7 @@ const Homepage = () => {
           <ul class="sidebubble">
             <li>A Post Feed with all of your friends thoughts about the world!</li>            
             <li>Post about how you feel and what you think of others</li>
-            <li>Comment on others posts. and if you feel like you didn't express yourself to your standard.. deleting your post is an Option!</li>
+            <li>Comment on others posts. and if you feel like you didn't express yourself to your standard.. deleting your post is an option!</li>
           </ul>
         </section>
       </main>
