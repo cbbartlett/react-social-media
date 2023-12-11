@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { CREATE_COMMENT } from '../../utils/mutations';
 
-import { ADD_COMMENT } from '../../utils/mutations';
 
 const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addComment, { error }] = useMutation(ADD_COMMENT);
+  const [addComment, { error }] = useMutation(CREATE_COMMENT);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
