@@ -33,20 +33,20 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form>
-        <label>
+    <div className='LsContainer'>
+      <h2 className='LSh2'>Login</h2>
+      <form className='LsForm'>
+        <label className='LsLabel'>
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
         <br />
-        <label>
+        <label className='LsLabel'>
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
-        <button type="button" onClick={handleLogin}>
+        <button className='LsButton' type="button" onClick={handleLogin}>
           Login
         </button>
       </form>

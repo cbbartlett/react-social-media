@@ -33,7 +33,7 @@ const Signup = () => {
 
   return (
     <div className="LsContainer">
-      <h2 className='LsH2'>Signup</h2>
+      <h2 className='LSh2'>Signup</h2>
       <form className='LsForm'>
         <label className='LsLable'>
           Username:
