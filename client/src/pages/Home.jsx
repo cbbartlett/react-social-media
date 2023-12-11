@@ -1,13 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import Header from '../components/Header/index.jsx';
 import Footer from '../components/Footer/index.jsx';
 
 const Homepage = () => {
+  const [thoughts, setThoughts] = useState([]);
+
+  useEffect(() => {
+    // Fetch thoughts from the GraphQL server
+    fetch('http://localhost:4000/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: `
+          query {
+            thoughts {
+              _id
+              thoughtText
+              comments {
+                _id
+                commentText
+              }
+            }
+          }
+        `,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.errors) {
+          throw new Error(data.errors[0].message);
+        } else {
+          setThoughts(data.data.thoughts);
+        }
+      })
+      .catch((error) => {
+        console.error('Failed to fetch thoughts:', error.message);
+      });
+  }, []);
+
   return (
-  <div class ="page">
+    <div className="page">
       <Header />
+      <section>
+        <h2>Recent Thoughts</h2>
+        {thoughts && thoughts.length > 0 ? (
+          thoughts.map((thought) => (
+            <div key={thought._id}>
+              <h3>{thought.thoughtText}</h3>
+              <ul>
+                {thought.comments &&
+                  thought.comments.map((comment) => (
+                    <li key={comment._id}>{comment.commentText}</li>
+                  ))}
+              </ul>
+            </div>
+          ))
+        ) : (
+          <p>No thoughts found.</p>
+        )}
+      </section>
       <main>
         <section>
           <p>
@@ -31,11 +84,9 @@ const Homepage = () => {
             <li>Real-time instant messaging</li>
           </ul>
         </section>
-        <section>
-        </section>
       </main>
       <Footer />
-  </div>
+    </div>
   );
 };
 

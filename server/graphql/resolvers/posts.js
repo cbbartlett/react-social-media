@@ -1,5 +1,5 @@
 import { AuthenticationError, UserInputError } from 'apollo-server';
-import Post from '../../models/Post.js';
+import Post from '../../models/thought.js';
 import checkAuth from '../../utils/check-auth.js';
 
 
