@@ -48,7 +48,7 @@ type Query {
 `);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb+srv://root:root@socialmediacluster.0txf60c.mongodb.net/Dasocialmedia", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
