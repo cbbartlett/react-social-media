@@ -24,7 +24,7 @@ const Signup = () => {
     signup({ variables: { username, password } })
       .then(() => {
         console.log('Signup successful');
-        navigate('/');
+        navigate('/login');
       })
       .catch((error) => {
         console.error('Signup error:', error);
