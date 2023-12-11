@@ -14,6 +14,15 @@ const resolvers = {
     },
   },
   Mutation: {
+    
+      deleteThought: async (parent, args) => {
+        await Thought.findByIdAndDelete(args.id);
+        return {
+          id: args.id
+        };
+      }
+    },
+    
     createThought: async (_, { thoughtText }) => {
       // Logic to create a new thought in the database
       const thought = {

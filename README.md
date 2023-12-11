@@ -1,8 +1,5 @@
-# React + Vite
+# Project Y
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
@@ -25,6 +22,12 @@ Currently, two official plugins are available:
 </br>
 
 ## Description
+Introducing "Y" - Your Ultimate Social Media Experience
+
+"Y" is a cutting-edge social media application designed to revolutionize the way you connect, share, and communicate with others. With its sleek and intuitive interface, "Y" offers a seamless and immersive experience that keeps you engaged and connected with friends, family, and the wider world.
+
+At the heart of "Y" is the power to express yourself authentically. Whether you want to share your thoughts, photos, videos, or creative endeavors, "Y" provides a platform that encourages free expression and fosters meaningful connections. Embrace your uniqueness and let your voice be heard.
+
 
 ## Screenshots
 
@@ -53,4 +56,4 @@ Link to the website: //Deployed Link// </br>
 - The instructional team at University of Texas at Austin <br>Leah Nelson: https://github.com/LeahNelson <br> Stephen Fudge: https://github.com/stephenfudge <br> Ian Darland: https://github.com/iandarland<br>Negin Namaranian: https://github.com/NeginNami<br> Diem Ly:
 
 ## Licenses
-Please refer to the LICENSE in the repository. </br>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

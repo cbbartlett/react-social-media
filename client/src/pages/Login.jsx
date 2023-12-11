@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
 const LOGIN_MUTATION = gql`
@@ -15,6 +16,7 @@ const LOGIN_MUTATION = gql`
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
   const [login, { loading, error }] = useMutation(LOGIN_MUTATION);
 
@@ -23,6 +25,7 @@ const Login = () => {
       .then((response) => {
         // Handle the successful login response here
         console.log('Login successful');
+        navigate('/Home1');
         console.log('User ID:', response.data.loginUser.id);
         console.log('Username:', response.data.loginUser.username);
       })

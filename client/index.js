@@ -6,43 +6,45 @@ import "dotenv/config";
 import cors from "cors";
 
 const schema = buildSchema(`
-  type User {
-    id: ID!
-    username: String!
-    password: String!
-  }
+type User {
+  id: ID!
+  username: String!
+  password: String!
+}
 
-  type Comment {
-    _id: ID!
-    commentText: String!
-  }
+type Comment {
+  _id: ID!
+  commentText: String!
+}
 
-  type Thought {
-    _id: ID!
-    thoughtText: String!
-    comments: [Comment!]!
-  }
+type Thought {
+  _id: ID!
+  thoughtText: String!
+  comments: [Comment!]!
+}
 
-  input CreateThoughtInput {
-    thoughtText: String!
-  }
+input CreateThoughtInput {
+  thoughtText: String!
+}
 
-  input CreateCommentInput {
-    thoughtId: ID!
-    commentText: String!
-  }
 
-  type Mutation {
-    createUser(username: String!, password: String!): User!
-    loginUser(username: String!, password: String!): User!
-    createThought(input: CreateThoughtInput!): Thought!
-    createComment(input: CreateCommentInput!): Comment!
-  }
+input CreateCommentInput {
+  thoughtId: ID!
+  commentText: String!
+}
 
-  type Query {
-    hello: String
-    thoughts: [Thought!]!
-  }
+type Mutation {
+  createUser(username: String!, password: String!): User!
+  loginUser(username: String!, password: String!): User!
+  createThought(input: CreateThoughtInput!): Thought
+  updateThought(id: ID!, thoughtText: String!): Thought
+  deleteThought(id: ID!): Thought
+  createComment(input: CreateCommentInput!): Comment
+}
+
+type Query {
+  thoughts: [Thought]
+}
 `);
 
 // MongoDB connection

@@ -13,7 +13,7 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <img className="m-0" src={logo} alt="Project Y"></img>
+          <img className="m-0" src={logo} alt="Project Y"></img>
           </Link>
           <p className="m-0">Share your thoughts....Y not?</p>
         </div>
@@ -29,18 +29,18 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
-                Login 
+              <Link className="btn btn-lg btn-info m-2" to="/">
+                Logout 
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                 Signup for Y
+              <Link className="btn btn-lg btn-light m-2" to="/profile">
+                 Profile
               </Link>
             </>
           )}
         </div>
       </div>
     // </header>
-   );
+  );
 };
 
 export { Header as default };
