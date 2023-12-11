@@ -1,13 +1,13 @@
-// Login.jsx
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
-import '../App.css'; // Import the shared CSS file
+import '../App.css';
 
 const LOGIN_MUTATION = gql`
   mutation Login($username: String!, $password: String!) {
     loginUser(username: $username, password: $password) {
-      token
+      id
+      username
     }
   }
 `;
@@ -21,17 +21,19 @@ const Login = () => {
   const handleLogin = () => {
     login({ variables: { username, password } })
       .then((response) => {
-        const token = response.data.loginUser.token;
-        // Store the token in local storage or state for future use
+        // Handle the successful login response here
         console.log('Login successful');
+        console.log('User ID:', response.data.loginUser.id);
+        console.log('Username:', response.data.loginUser.username);
       })
       .catch((error) => {
+        // Handle the login error here
         console.error('Login error:', error);
       });
   };
 
   return (
-    <div className="LsContainer">
+    <div className='LsContainer'>
       <h2 className='LSh2'>Login</h2>
       <form className='LsForm'>
         <label className='LsLabel'>

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
+import "dotenv/config"
 import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
 import cors from "cors";
@@ -9,7 +10,7 @@ const app = express();
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://root:root@socialmediacluster.0txf60c.mongodb.net/Dasocialmedia', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

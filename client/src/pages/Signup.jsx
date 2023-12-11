@@ -1,7 +1,7 @@
-// Signup.jsx
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import '../App.css'; // Import the shared CSS file
 
 const SIGNUP_MUTATION = gql`
@@ -16,6 +16,7 @@ const SIGNUP_MUTATION = gql`
 const Signup = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
   const [signup, { loading, error }] = useMutation(SIGNUP_MUTATION);
 
@@ -23,7 +24,11 @@ const Signup = () => {
     signup({ variables: { username, password } })
       .then(() => {
         console.log('Signup successful');
+<<<<<<< HEAD
         isLoggedIn == true;
+=======
+        navigate('/login');
+>>>>>>> 7148f7f6e1650f053069ce778f9b9f5822aaf533
       })
       .catch((error) => {
         console.error('Signup error:', error);
@@ -32,7 +37,7 @@ const Signup = () => {
 
   return (
     <div className="LsContainer">
-      <h2 className='LsH2'>Signup</h2>
+      <h2 className='LSh2'>Signup</h2>
       <form className='LsForm'>
         <label className='LsLable'>
           Username:

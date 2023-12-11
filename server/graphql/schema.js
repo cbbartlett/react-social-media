@@ -1,30 +1,43 @@
 import { gql } from 'apollo-server';
 
 const typeDefs = gql`
-  type User {
-    id: ID!
-    username: String!
-    password: String!
-    createdAt: String!
-  }
+type User {
+  id: ID!
+  username: String!
+  password: String!
+}
 
-  input CreateUserInput {
-    username: String!
-    password: String!
-  }
+type Comment {
+  _id: ID!
+  commentText: String!
+}
 
-  type Query {
-    getUser(id: ID!): User!
-  }
+type Thought {
+  _id: ID!
+  thoughtText: String!
+  comments: [Comment!]!
+}
 
-  type Mutation {
-    createUser(input: CreateUserInput!): User!
-  }
+input CreateThoughtInput {
+  thoughtText: String!
+}
 
-  schema {
-    query: Query
-    mutation: Mutation
-  }
+input CreateCommentInput {
+  thoughtId: ID!
+  commentText: String!
+}
+
+type Mutation {
+  createUser(username: String!, password: String!): User!
+  loginUser(username: String!, password: String!): User!
+  createThought(input: CreateThoughtInput!): Thought!
+  createComment(input: CreateCommentInput!): Comment!
+}
+
+type Query {
+  hello: String
+  thoughts: [Thought!]!
+}
 `;
 
 export default typeDefs;
