@@ -9,7 +9,7 @@ const Homepage = () => {
 
   useEffect(() => {
     // Fetch thoughts from the GraphQL server
-    fetch('http://localhost:4000/graphql', {
+    fetch('http://localhost:5500/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

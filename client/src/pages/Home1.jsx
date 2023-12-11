@@ -15,7 +15,7 @@ const Homepage = () => {
   
     useEffect(() => {
         // Fetch thoughts from the server
-        fetch('http://localhost:4000/graphql', {
+        fetch('http://localhost:5500/graphql', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -49,7 +49,7 @@ const Homepage = () => {
   
     const handleCreateThought = () => {
       // Send a mutation to create a new thought
-      fetch('http://localhost:4000/graphql', {
+      fetch('http://localhost:5500/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -80,7 +80,7 @@ const Homepage = () => {
   
     const handleCreateComment = () => {
       // Send a mutation to create a new comment
-      fetch('http://localhost:4000/graphql', {
+      fetch('http://localhost:5500/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -125,7 +125,7 @@ const handleUpdateThought = (thoughtId) => {
   const updatedThoughtText = 'Updated thought text';
 
   // Send a mutation to update the thought
-  fetch('http://localhost:4000/graphql', {
+  fetch('http://localhost:5500/graphql', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -162,7 +162,7 @@ const handleUpdateThought = (thoughtId) => {
       
 const handleDeleteThought = (thoughtId) => {
     // Send a mutation to delete the thought
-    fetch('http://localhost:4000/graphql', {
+    fetch('http://localhost:5500/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

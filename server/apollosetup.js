@@ -12,7 +12,7 @@ async function startServer() {
 }
 
 startServer().then(() => {
-  app.listen({ port: 4000 }, () =>
-    console.log(`Server ready at http://localhost:4000/graphql`)
+  app.listen({ port: 5500  }, () =>
+    console.log(`Server ready at http://localhost:5500/graphql`)
   );
 });
