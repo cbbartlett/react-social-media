@@ -24,11 +24,7 @@ const Signup = () => {
     signup({ variables: { username, password } })
       .then(() => {
         console.log('Signup successful');
-<<<<<<< HEAD
-        isLoggedIn == true;
-=======
         navigate('/login');
->>>>>>> 7148f7f6e1650f053069ce778f9b9f5822aaf533
       })
       .catch((error) => {
         console.error('Signup error:', error);
