@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "develop": "concurrently \"cd server && npm run watch\" \"cd server && npm run apollo\" \"cd client && npm run dev\" \"cd client && npm run start\"", 
     "dev": "vite",
     "build": "vite build",
     "start": "node index.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",

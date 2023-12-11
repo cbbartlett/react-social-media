@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import ErrorPage from './pages/ErrorPage';
+import isLoggedIn from './pages/Signup'
+
 
 function App() {
   return (

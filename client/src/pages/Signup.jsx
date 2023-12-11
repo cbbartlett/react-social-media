@@ -45,6 +45,7 @@ const Signup = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
+        <Route path="/Home" element={<button type="button" onClick={handleSignup}>Sign Up!</button>}/>
         <button className='LsButton' type="button" onClick={handleSignup}>
           Signup
         </button>
